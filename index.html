@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>jQury .filterable()</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for filterable and this demo. Your implementation will not need this file.  -->
+    <link href="css/filterable.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="demo.html">Demo</a></li>
+        </ul>
+        <h3 class="text-muted">jQuery .filterable()</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>.filterable()</h1>
+        <p class="lead">A small jQuery plugin that turns any form text input into a filtering box that hides and shows elements on the page. </p>
+        <p><a class="btn btn-lg btn-success" href="demo.html" role="button">Try it </a></p>
+      </div>
+
+	<div class="row">
+	  <div class="col-md-12">
+<div class="page-header">
+      <h1 id="">What is it?</h1>
+    </div>		  
+    <p class="lead">It is now quite often that user interfaces want to allow users to filter any content on their website quickly. Implementing this feature is simple enough with minor additions to the already amazing jQuery framework. AsI worked with this UI feature however I found myself having to repeat the code and copy paste too often so I made a plugin that fits into the jQuery structure easily and can be reused anywhere. </p>
+
+<div class="page-header">
+      <h1 id="">How to Install</h1>
+    </div>		  
+<p>
+<h3> Step 1: Add the files</h3>
+Copy and paste the filterable file. There is a minified version for production and full version if you would like to expand the code. Load the files in your html file where you load your javascript (usually at the end of the document. ) The file rference should come AFTER jQuery or it won't work. Here's an example:
+</p>
+<pre>&lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="js/filterable.js"&gt;&lt;/script&gt;		</pre>
+<h3> Step 2: Add an input div</h3>
+<p>You can use this tool with any input form element like the one below. In terms of style it would work better if you surround it by a div but that's up to you.   
+</p>
+<pre> &lt;div&gt; &lt;input type="text" class="filterable" placeholder="filter here" &gt;&lt;/div&gt;</pre>    
+<h3> Step 2: Add filterable to your element:</h3>
+<p>Use this short form to make the input filterable (remember to load it after the DOM is ready. It is advised to at least add the selector variable to make sure you show and hide the relevant content. Check the options table below for details.    
+</p>
+<pre class="pre-scrollable"> $('.filterable').filterable({ 'selector' : '.items'});</pre>	
+    		  
+		  
+<div class="page-header">
+      <h1 id="">Options</h1>
+    </div>		  
+    <p>Here's an example with options defined: </p>
+		  <pre class="pre-scrollable"> 
+  $('.filterable').filterable({
+  	'selector' : 'h2', 
+  	'fade' : true, 
+  	'complete' : function(){ 
+  		console.log('done!'); 
+  		}
+  });
+</pre>
+
+<div class="bs-example">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Choices</th>
+            <th width="50%">Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>selector</td>
+            <td>"p" - default</td>
+            <td>Add any selector you like in the jQuery selector format. For instance <code>".items"</code></td>
+          </tr>
+          <tr>
+            <td>fade</td>
+            <td>true -- default <br /> false</td>
+            <td><code>true</code> does the animation as fadeI/fadeOut. <code>false</code> will instead use the show/hide, which does not have an animation but is faster. </td>
+          </tr>
+          <tr>
+            <td>complete</td>
+            <td><i class="text-muted">no default</i></td>
+            <td>enter any function that you would like ran after the filtering by using <code>function(){} </code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+<div class="page-header">
+      <h1 id="">Change Log</h1>
+    </div>		  
+    <p class="lead">Past and planned changes to the code </p>
+
+<h3> Planned </h3>	  
+<p>
+Copy and paste the filterable file. There is a minified version for production and full version if you would like to expand the code. Load the files in your html file where you load your javascript (usually at the end of the document. ) The file rference should come AFTER jQuery or it won't work. Here's an example:
+</p>
+
+<h3> Version 0.1  </h3>	  
+<p>
+Copy and paste the filterable file. There is a minified version for production and full version if you would like to expand the code. Load the files in your html file where you load your javascript (usually at the end of the document. ) The file rference should come AFTER jQuery or it won't work. Here's an example:
+</p>
+
+
+
+	  </div>
+	</div>
+
+
+      <div class="footer">
+        <p>Created by Caner Uguz. http://www.caneruguz.com. MIT License. </p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+ 
+  </body>
+</html>
