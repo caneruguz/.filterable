@@ -11,7 +11,7 @@
     <title>jQury .filterable()</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for filterable and this demo. Your implementation will not need this file.  -->
     <link href="css/filterable.css" rel="stylesheet">
@@ -28,126 +28,85 @@
 
   <body>
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="demo.html">Demo</a></li>
-        </ul>
-        <h3 class="text-muted">jQuery .filterable()</h3>
+    <div class="top">
+      <div class="container">
+        <h1> .filterable() </h1>
+        <p class="lead"> A small jQuery plugin that turns any text input into a filtering box that hides and shows elements on the page.</p> 
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="text-center"> <input type="text" class="filterable input-lg" placeholder="Try it here here" /> 
+          </div>
+          </div>
+          <div class="col-sm-4">
+              <a class="btn btn-primary btn-lg" href="https://github.com/caneruguz/.filterable">Get it on Github </a>
+          </div>
+        </div>
+
       </div>
-
-      <div class="jumbotron">
-        <h1>.filterable()</h1>
-        <p class="lead">A small jQuery plugin that turns any form text input into a filtering box that hides and shows elements on the page. </p>
-        <p><a class="btn btn-lg btn-success" href="demo.html" role="button">Try it </a> <a class="btn btn-lg btn-primary" href="js/filterable.js" role="button">Download it</a></p>
-      </div>
-
-	<div class="row">
-	  <div class="col-md-12">
-<div class="page-header">
-      <h1 id="">What is it?</h1>
-    </div>		  
-    <p class="lead">It is now quite often that user interfaces want to allow users to filter any content on their website quickly. Implementing this feature is simple enough with minor additions to the already amazing jQuery framework. AsI worked with this UI feature however I found myself having to repeat the code and copy paste too often so I made a plugin that fits into the jQuery structure easily and can be reused anywhere. </p>
-
-<div class="page-header">
-      <h1 id="">How to Install</h1>
-    </div>		  
-<p>
-<h3> Step 1: Add the files</h3>
-Copy and paste the filterable file. There is a minified version for production and full version if you would like to expand the code. Load the files in your html file where you load your javascript (usually at the end of the document. ) The file rference should come AFTER jQuery or it won't work. Here's an example:
-</p>
-<pre>&lt;script src="https://code.jquery.com/jquery.js"&gt;&lt;/script&gt;
-&lt;script src="js/filterable.js"&gt;&lt;/script&gt;		</pre>
-<h3> Step 2: Add an input div</h3>
-<p>You can use this tool with any input form element like the one below. In terms of style it would work better if you surround it by a div but that's up to you.   
-</p>
-<pre> &lt;div&gt; &lt;input type="text" class="filterable" placeholder="filter here" &gt;&lt;/div&gt;</pre>    
-<h3> Step 2: Add filterable to your element:</h3>
-<p>Use this short form to make the input filterable (remember to load it after the DOM is ready. It is advised to at least add the selector variable to make sure you show and hide the relevant content. Check the options table below for details.    
-</p>
-<pre class="pre-scrollable"> $('.filterable').filterable({ 'selector' : '.items'});</pre>	
-    		  
-		  
-<div class="page-header">
-      <h1 id="">Options</h1>
-    </div>		  
-    <p>Here's an example with options defined: </p>
-		  <pre class="pre-scrollable"> 
-  $('.filterable').filterable({
-  	'selector' : 'h2', 
-  	'fade' : true, 
-  	'complete' : function(){ 
-  		console.log('done!'); 
-  		}
-  });
-</pre>
-
-<div class="bs-example">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>Option</th>
-            <th>Choices</th>
-            <th width="50%">Explanation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>selector</td>
-            <td>"p" - default</td>
-            <td>Add any selector you like in the jQuery selector format. For instance <code>".items"</code></td>
-          </tr>
-          <tr>
-            <td>fade</td>
-            <td>true -- default <br /> false</td>
-            <td><code>true</code> does the animation as fadeI/fadeOut. <code>false</code> will instead use the show/hide, which does not have an animation but is faster. </td>
-          </tr>
-          <tr>
-            <td>complete</td>
-            <td><i class="text-muted">no default</i></td>
-            <td>enter any function that you would like ran after the filtering by using <code>function(){} </code></td>
-          </tr>
-        </tbody>
-      </table>
     </div>
-
-<div class="page-header">
-      <h1 id="">Change Log</h1>
-    </div>		  
-    <p class="lead">Past and planned changes to the code </p>
-
-<h3> Planned </h3>	  
-<p>
-<ul>
-	<li>Add text highlighting so that the searched word is highlighted. </li>
-	<li>Add option to use hide, highlight or both.  </li>
-</ul>
-</p>
-
-<h3> Version 0.1  </h3>	  
-<p>
-<ul>
-	<li>Dedicated github repository and documentation created. </li>
-	<li>Callback function option added </li>
-	<li>Fade animation option added </li>
-	<li>Selectors option added.  </li>
-	<li>Jquery plugin created. </li>
-</ul>	
-</p>
-
-
-
-	  </div>
-
-	</div>
-
-
-      <div class="footer">
-        <p>Created by Caner Uguz. http://www.caneruguz.com. MIT License. </p>
+    <div class="content"> 
+      <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Arrested Development</h3>
+              <p>Marry me.<br /><i>Anonymous</i></p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Dexter</h3>
+              <p>I've lived in darkness a long time. Over the years my eyes adjusted until the dark became my world and I could see.<br /><i>Dexter</i></p>
+             </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Doctor Who</h3>
+              <p>I hate yogurt. It's just stuff with bits in.<br /><i>The Doctor</i></p>
+             </div><!--/span-->
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Futurama</h3>
+              <p>Tell her she looks thin.<br /><i>Fry</i></p>
+             </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Holy Grail!</h3>
+              <p>Shut up!<br /><i>Arthur</i></p>
+             </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Lorem Ipsum</h3>
+              <p>Laboris nisi ut aliquip ex ea commodo consequat.<br /><i>Anonymous</i></p>
+             </div><!--/span-->
+        </div>
+        <div class="row">            
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Simpsons</h3>
+              <p>I've had it with this school, Skinner. Low test scores, class after class of ugly, ugly children&hellip;<br /><i>Superintendent Chalmers</i></p>             </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Star Wars</h3>
+              <p>Look, I ain't in this for your revolution, and I'm not in it for you, Princess. I expect to be well paid. I'm in it for the money.<br /><i>Han Solo</i></p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Simpsons</h3>
+              <p>I'm going to the back seat of my car, with the woman I love, and I won't be back for ten minutes!<br /><i>Homer</i></p>
+             </div><!--/span-->
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Dr. Who</h3>
+              <p>Sorry, checking all the water in this area; there's an escaped fish.<br /><i>The Doctor</i></p>
+              </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Star Wars</h3>
+              <p>The Force is strong with this one. I have you now.<br /><i>Darth Vader</i></p>
+             </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4 items">
+              <h3>Holy Grail</h3>
+              <p>You don't frighten us, English pig-dogs! Go and boil your bottoms, sons of a silly person! I blow my nose at you, so-called Ah-thoor Keeng.<br /><i>Frenchman</i></p>
+            </div><!--/span-->                  
+        </div>
+    </div> 
+    <div class="footer">
+      <div class="container text-center">
+            <p>Created by <a href="http://www.caneruguz.com"> Caner Uguz </a>. This code is provided under the  <a href="http://opensource.org/licenses/MIT"> MIT License</a>. </p>
       </div>
-
-    </div> <!-- /container -->
+    </div>
 
 
     <!-- Bootstrap core JavaScript
@@ -157,7 +116,20 @@ Copy and paste the filterable file. There is a minified version for production a
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
- 
->>>>>>> master
+    <script src="js/filterable.js"></script>
+    <script type="text/javascript"> 
+	    $(document).ready(function(){
+  			// Filterable with settings
+        $('.filterable').filterable({
+            selector : '.items', 
+            fade : true, 
+            resetText : '&times;',
+            complete : function(){ 
+              console.log('done!'); 
+            }
+          }); 
+	    });  
+	    
+    </script>
   </body>
 </html>
