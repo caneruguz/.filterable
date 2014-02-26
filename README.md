@@ -56,6 +56,18 @@ highlightColor (string) | '#ffffa6' | Color of the highlight.
 complete	| no default	| Enter any function that you would like ran after the filtering by using `function(){}`
 
 ---
+### Style
+The code does not come with any CSS files but you can easily change the style components with the following class names.
+
+**.ft-reset** : The reset button
+
+**.filterable** : the form input field that filters the text
+
+
+You can also add more style elements to the div surrounding the html to fit with your existing layout. 
+
+
+---
 ### Dependencies
 This code is designed to fit as many environments as possible. The only requirement is jQuery. Get the lates version here:
 [http://jquery.com/](http://jquery.com/)
