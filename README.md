@@ -2,6 +2,8 @@ filterable
 ==========
 
 Filterable is small jQuery plugin that turns any text input into a filtering box that hides and shows elements on the page.
+[Try it here!](http://caneruguz.github.io/.filterable/)
+
 
 ### What it does:
 - Shows or hides content based on what you type in an input box
@@ -77,7 +79,7 @@ This code is designed to fit as many environments as possible. The only requirem
 Past and planned changes to the code
 
 #### Planned
-- Fix bug to make the highlight omit html with longer tags like <span> 
+- Fix bug to make the highlight omit html with longer tags like `<span>` 
 - Add scroll helper
 
 #### Version 0.2
