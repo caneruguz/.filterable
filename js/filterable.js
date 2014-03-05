@@ -42,7 +42,12 @@
 				fade($(this), 'on'); 
 			});
 			$(this).remove(); 
-			$('.filterable').val('').focus();  						
+			$('.filterable').val('').focus(); 
+			$( ".ft-highlight" ).each(function(){
+				$(this).replaceWith( $(this).text() );  
+			});
+			
+			 						
 		});
 
 		var highlightOn = function(el, text, content){
