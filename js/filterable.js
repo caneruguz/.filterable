@@ -36,17 +36,17 @@
 					element.hide(); 
 				}				
 			}
-
 		}
-        
 		$(document).on('click', '.ft-reset', function(){
+			var el = $(this);
 			$(settings.selector).each(function() {
-				fade($(this), 'on'); 
+				fade(el, 'on');
 			});
-			$(this).remove(); 
+			el.remove();
 			$('.filterable').val('').focus(); 
 			$( ".ft-highlight" ).each(function(){
-				$(this).replaceWith( $(this).text() );  
+				var hEl = $(this);
+				hEl.replaceWith( hEl.text() );
 			});
 		});
 
@@ -64,8 +64,9 @@
 		}; 
 		var highlightOff = function() {
 			$('.ft-highlight').each(function(){
-				var content = $(this).text();
-				$(this).replaceWith(content);  
+				var el = $(this);
+				var content = el.text();
+				el.replaceWith(content);
 			}); 			
 		}
 
