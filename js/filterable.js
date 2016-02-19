@@ -14,7 +14,9 @@
             resetText : '&times;',
             highlight : true,
     		highlightColor: '#ffffa6',
-            complete: null
+            complete: null,
+			matchAction : null,
+			noMatchAction : null
         }, options);
         
         // Method to switch between fading vs regular show in jquery. 
@@ -46,8 +48,6 @@
 			$( ".ft-highlight" ).each(function(){
 				$(this).replaceWith( $(this).text() );  
 			});
-			
-			 						
 		});
 
 		var highlightOn = function(el, text, content){
@@ -80,13 +80,22 @@
 					content = $(this).text().toLowerCase();
 					exists = content.indexOf(text);
 					if (exists != -1) {
-						fade($(this), 'on');
-						if(settings.highlight){					
+						if ( $.isFunction( settings.matchAction ) ) {
+							settings.matchAction.call( this );
+						} else {
+							fade($(this), 'on');
+						}
+
+						if(settings.highlight){
 							highlightOn(el, text, content);
 						} 
 					
 					} else {
-						fade($(this), 'off'); 
+						if ( $.isFunction( settings.noMatchAction ) ) {
+							settings.noMatchAction.call( this );
+						} else {
+							fade($(this), 'off');
+						}
 					}
 				});
 				if($('.ft-reset').length  == 0 ) {
