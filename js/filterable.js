@@ -57,7 +57,7 @@
 			textBegin = contentCap.toLowerCase().indexOf(text); 
 			textEnd = textBegin + text.length; 
 			original = contentCap.substring(textBegin, textEnd);
-			regex = new RegExp('('+original+')(?!.>)(?!>)',"gi");
+			regex = new RegExp('('+original+')(?![^<]*>|[^<>]*<\/)',"gi");
 			result = contentCap.replace(regex, '<span class="ft-highlight">$1</span>'); 
 			el.html(result); 
 			$('.ft-highlight').css('background', settings.highlightColor);
